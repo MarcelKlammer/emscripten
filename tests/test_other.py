@@ -9225,3 +9225,6 @@ int main () {
     assert lf - 900 <= f <= lf - 500
     # both is a little bigger still
     assert both - 100 <= lf <= both - 50
+
+  def test_llvm_includes(self):
+    self.build('#include <stdatomic.h>', self.get_dir(), 'atomics.c')
